@@ -12,6 +12,8 @@ export default async function PostPage({ params }: Params) {
     notFound();
   }
   return (
-  <div></div>
+  <div>
+    
+  </div>
 );
 }
