@@ -28,6 +28,10 @@ export default async function PostPage({ params }: Params) {
           </div>
         )}
         <CardHeader>
+          <div className="flex justify-between items-center mb-4">
+            <p className="text-sm text-gray-500">投稿者：{post.author.name}</p>
+            <time></time>
+          </div>
           <CardTitle></CardTitle>
         </CardHeader>
         <CardContent></CardContent>
