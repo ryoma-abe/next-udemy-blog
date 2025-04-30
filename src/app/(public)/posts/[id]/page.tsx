@@ -2,6 +2,8 @@ import { getPost } from "@/lib/post";
 import { notFound } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { format } from "date-fns";
+import { ja } from "date-fns/locale";
 type Params = {
   params: Promise<{ id: string }>;
 };
@@ -30,11 +32,15 @@ export default async function PostPage({ params }: Params) {
         <CardHeader>
           <div className="flex justify-between items-center mb-4">
             <p className="text-sm text-gray-500">投稿者：{post.author.name}</p>
-            <time></time>
+            <time>
+              {format(new Date(post.createdAt), "yyyy年MM月dd日", {
+                locale: ja,
+              })}
+            </time>
           </div>
-          <CardTitle></CardTitle>
+          <CardTitle className="text-3xl font-bold">{post.title}</CardTitle>
         </CardHeader>
-        <CardContent></CardContent>
+        <CardContent>{post.content}</CardContent>
       </Card>
     </div>
   );
