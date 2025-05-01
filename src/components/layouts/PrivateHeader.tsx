@@ -6,8 +6,8 @@ import {
 } from "@/components/ui/navigation-menu";
 export default async function PrivateHeader() {
   return (
-    <header>
-      <div>
+    <header className="border-b bg-blue-200">
+      <div className="container mx-auto p-4 flex items-center justify-between">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
