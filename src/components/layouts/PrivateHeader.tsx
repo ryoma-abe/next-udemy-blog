@@ -11,7 +11,7 @@ export default async function PrivateHeader() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/dashboard"></Link>
+              <Link href="/dashboard">管理ページ</Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
