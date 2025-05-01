@@ -8,10 +8,7 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 
 export default function LoginForm() {
-  const [errorMessage, formAction, isPending] = useActionState(
-    authenticate,
-    undefined
-  );
+  const [errorMessage, formAction] = useActionState(authenticate, undefined);
 
   return (
     <div>
