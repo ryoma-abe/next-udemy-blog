@@ -11,7 +11,7 @@ export async function authenticate(
     await signIn("credentials", formData);
   } catch (error) {
     if (error instanceof AuthError) {
-      switch (error.type) {
+      switch (error.message) {
         case "CredentialsSignin":
           return "認証情報が無効です。";
         default:
